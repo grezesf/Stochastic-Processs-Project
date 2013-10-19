@@ -1,0 +1,1 @@
+This repository contains the work of Arun ADITHTHAN & Felix GREZES related to the Bicycle simulation project for the Stochastic processes course taught by Pr. Felisa J. Vázquez-Abad, in Fall 2013.
