@@ -1,0 +1,40 @@
+\documentclass[12pt,a4paper,oneside]{article}
+
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{indentfirst}
+\setlength{\topmargin}{-1.0in}
+\setlength{\textheight}{10.7in}
+\begin{document}
+
+
+\title{Project Proposal for Introduction to Stochastic Processes and Computer Simulation}
+\author{
+CSc 86030\\
+by Felix GREZES \& Aru ADITHTHAN\\
+}
+\date{Fall 2013}
+\maketitle
+
+\begin{abstract}
+\large{
+Within the goal of improving the current bicycle rental system simulation software, we have come up with two ideas. First we will implement a better origin-destination pair generator. Secondly we wish to implement a general pricing scheme interface. Both of these implementations should be general and allow other users to code their own, with some degree of freedom.
+%end large
+}
+\end{abstract}
+
+\section{Origin-Destination Pair Generator}
+
+\large{
+In the current implementation, when the simulation generates a new client, it creates a random origin-destination pair with uniform probability. In real life however, traffic is heavily influenced by station location and time of day. For example, locations on top of a hill are more likely to be a origin than a destination; locations in working districts could be a popular destination in the morning, and a popular origin in the evening; certain specific routes could be frequently used.
+
+Our idea is to have the origin-destination pair generator use as input weight matrices. Depending on the state of the simulation, the generator would pick the appropriate matrix and generate a pair using it. Parameters could be time of day, weather; anything an other coder could wish to implement.
+}
+
+\section{Pricing Scheme Interface}
+
+\large{
+The current pricing scheme is rigid. We wish to be able to test different schemes to see which are viable and which are not. Our goal is to program an more general interface, which the simulator would call when it needs how much to charge a customer. Again, schemes could use any parameter of the state of the simulation: pricing could depend on the origin, the destination, the distance, the time of day etc...
+}
+
+\end{document}
